@@ -1,29 +1,41 @@
 package me.kolterdyx.game42editor;
 
 import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.ScreenUtils;
+import me.kolterdyx.game42editor.components.InputHandler;
+import me.kolterdyx.game42editor.components.Level;
 
 public class Main extends ApplicationAdapter {
-	SpriteBatch batch;
-	Texture img;
-	
+	SpriteBatch boardBatch;
+	SpriteBatch guiBatch;
+	Level level;
+	public static Level currentLevel;
+
 	@Override
 	public void create () {
-		batch = new SpriteBatch();
+		Gdx.input.setInputProcessor(new InputHandler());
+		boardBatch = new SpriteBatch();
+		guiBatch = new SpriteBatch();
+		level = new Level(new Vector2(10, 10));
+		currentLevel = level;
 	}
 
 	@Override
 	public void render () {
-		ScreenUtils.clear(0, 0.1f, 0.1f, 1);
-		batch.begin();
-		batch.end();
+		ScreenUtils.clear(0f, 0.05f, 0.05f, 1f);
+		boardBatch.begin();
+		guiBatch.begin();
+		level.render(boardBatch, guiBatch);
+		boardBatch.end();
+		guiBatch.end();
 	}
 	
 	@Override
 	public void dispose () {
-		batch.dispose();
-		img.dispose();
+		boardBatch.dispose();
 	}
 }

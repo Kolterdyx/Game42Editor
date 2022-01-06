@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="30mm"
+   height="30mm"
+   viewBox="0 0 30 30"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="rocket.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="-13.72285"
+     inkscape:cy="36.281777"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="971"
+     inkscape:window-x="1672"
+     inkscape:window-y="17"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="axonomgrid"
+       id="grid4555"
+       units="mm"
+       empspacing="5"
+       enabled="false"
+       originx="-7.9999998"
+       originy="-1.5039821e-14" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-22.104166,-111.15476)">
+    <path
+       style="fill:#aac8c8;fill-opacity:1;stroke:none;stroke-width:0.3364068px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 37.104166,111.15476 -3.500348,7.80044 v 5.99963 l -2.33287,7.20017 -1.166782,8.99976 4.666436,-7.19955 1.555943,0.79995 -1.555943,1.59991 -1.166784,4.20004 2.333566,-1.19992 1.166782,1.79957 1.166784,-1.79957 2.333564,1.19992 -1.166782,-4.20004 -1.555943,-1.59991 1.555943,-0.79995 4.666434,7.19955 -1.166782,-8.99976 -2.33287,-7.20017 v -5.99963 z"
+       id="path4557"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

@@ -26,6 +26,7 @@ allprojects {
         ashleyVersion = '1.7.3'
         aiVersion = '1.8.2'
         gdxControllersVersion = '2.1.0'
+        batikVersion = '1.14'
     }
 
     repositories {
@@ -61,6 +62,7 @@ project(":core") {
         api "com.badlogicgames.gdx:gdx:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+        api "org.apache.xmlgraphics:batik-all:$batikVersion"
         
     }
 }
