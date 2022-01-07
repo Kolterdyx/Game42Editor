@@ -38,8 +38,11 @@ public class EditorPanel extends ControlPanel {
     }
 
     public void test(){
+        Board board = parent.getBoard();
+        int[][] data = board.serialize();
+
         System.out.println("------------");
-        for (int[] x : parent.getBoard().serialize())
+        for (int[] x : data)
         {
             for (int y : x)
             {
@@ -47,6 +50,8 @@ public class EditorPanel extends ControlPanel {
             }
             System.out.println();
         }
+
+        board.deserialize(data);
     }
 
     @Override

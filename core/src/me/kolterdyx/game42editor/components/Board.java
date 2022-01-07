@@ -25,6 +25,7 @@ public class Board {
         for (int x=0;x<width;x++){
             for (int y=0;y<height;y++){
                 Tile tile = new Tile(new Vector2(x*tileSize+margin*x+pos.x, y*tileSize+margin*y+pos.y));
+                tile.setTile(Textures.BLANK_TILE);
                 this.board[x][y] = tile;
                 tile.setSize(tileSize);
             }
@@ -127,10 +128,46 @@ public class Board {
                         data[x][y] = 6;
                         break;
                     default:
-                        data[x][y] = 0;
+                        System.out.println(tile.getTile());
+                        data[y][x] = 0;
                 }
             }
         }
         return data;
+    }
+
+    public void deserialize(int[][] data){
+        if (data.length != board.length || data[0].length != board[0].length) {
+            System.out.println("Wrong board shape, data not loaded");
+            return;
+        }
+        for (int x=0;x<data.length;x++){
+            for (int y=0;y<data[0].length;y++){
+                int value = data[x][y];
+                Tile tile = board[x][y];
+                switch(value){
+                    case 1:
+                        tile.setTile(Textures.RED_TILE);
+                        break;
+                    case 2:
+                        tile.setTile(Textures.GREEN_TILE);
+                        break;
+                    case 3:
+                        tile.setTile(Textures.BLUE_TILE);
+                        break;
+                    case 4:
+                        tile.setTile(Textures.RED_TARGET);
+                        break;
+                    case 5:
+                        tile.setTile(Textures.GREEN_TARGET);
+                        break;
+                    case 6:
+                        tile.setTile(Textures.BLUE_TARGET);
+                        break;
+                    default:
+                        tile.setTile(Textures.BLANK_TILE);
+                }
+            }
+        }
     }
 }

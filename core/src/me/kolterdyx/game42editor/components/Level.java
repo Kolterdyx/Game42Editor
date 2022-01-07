@@ -16,7 +16,7 @@ public class Level {
         this.panel.setPos(new Vector2(500, 100));
         this.board = new Board(this, boardSize);
         this.board.setPos(100, 100);
-        this.board.setTileSize(40);
+        this.board.setTileSize(30);
     }
 
     public void render(Batch boardBatch, Batch guiBatch){

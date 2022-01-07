@@ -20,7 +20,7 @@ public class Main extends ApplicationAdapter {
 		Gdx.input.setInputProcessor(new InputHandler());
 		boardBatch = new SpriteBatch();
 		guiBatch = new SpriteBatch();
-		level = new Level(new Vector2(10, 10));
+		level = new Level(new Vector2(15, 15));
 		currentLevel = level;
 	}
 
