@@ -27,6 +27,7 @@ allprojects {
         aiVersion = '1.8.2'
         gdxControllersVersion = '2.1.0'
         batikVersion = '1.14'
+        jsonVersion = '20211205'
     }
 
     repositories {
@@ -36,6 +37,7 @@ allprojects {
         gradlePluginPortal()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+
     }
 }
 
@@ -63,6 +65,7 @@ project(":core") {
         api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
         api "org.apache.xmlgraphics:batik-all:$batikVersion"
+        api "org.json:json:$jsonVersion"
         
     }
 }

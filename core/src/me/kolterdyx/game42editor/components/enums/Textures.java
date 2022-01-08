@@ -1,52 +1,57 @@
 package me.kolterdyx.game42editor.components.enums;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Gdx2DPixmap;
-import com.badlogic.gdx.graphics.g3d.model.Node;
-import com.badlogic.gdx.math.Vector2;
+import me.kolterdyx.game42editor.components.utils.Counter;
 import org.apache.batik.anim.dom.SAXSVGDocumentFactory;
-import org.apache.batik.anim.dom.SVGDOMImplementation;
-import org.apache.batik.swing.JSVGCanvas;
-import org.apache.batik.transcoder.SVGAbstractTranscoder;
 import org.apache.batik.transcoder.TranscoderException;
 import org.apache.batik.transcoder.TranscoderInput;
 import org.apache.batik.transcoder.TranscoderOutput;
 import org.apache.batik.transcoder.image.PNGTranscoder;
 import org.apache.batik.util.XMLResourceDescriptor;
+import org.jetbrains.annotations.ApiStatus.*;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.svg.SVGDocument;
 
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.awt.image.RenderedImage;
 import java.io.*;
 import java.net.URI;
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
 
 public enum Textures {
-    RED_TILE("tiles/red_tile.svg"),
-    GREEN_TILE("tiles/green_tile.svg"),
-    BLUE_TILE("tiles/blue_tile.svg"),
-    BLANK_TILE("tiles/blank_tile.svg"),
-    BOX("widgets/box.svg"),
-    DARK_BOX("widgets/box_darkened.svg"),
-    TARGET("tiles/target.svg"),
-    RED_TARGET("tiles/red_target.svg"),
-    GREEN_TARGET("tiles/green_target.svg"),
-    BLUE_TARGET("tiles/blue_target.svg");
+    RED_TILE("textures/tiles/red_tile.svg"),
+    GREEN_TILE("textures/tiles/green_tile.svg"),
+    BLUE_TILE("textures/tiles/blue_tile.svg"),
+    BLANK_TILE("textures/tiles/blank_tile.svg"),
+    BOX("textures/widgets/box.svg"),
+    DARK_BOX("textures/widgets/box_darkened.svg"),
+    TARGET("textures/tiles/target.svg"),
+    RED_TARGET("textures/tiles/red_target.svg"),
+    GREEN_TARGET("textures/tiles/green_target.svg"),
+    BLUE_TARGET("textures/tiles/blue_target.svg"),
+    RED_PAINT("textures/sprites/red_paint.svg"),
+    GREEN_PAINT("textures/sprites/green_paint.svg"),
+    BLUE_PAINT("textures/sprites/blue_paint.svg"),
+    ARROW_UP("textures/sprites/arrow_up.svg"),
+    ARROW_LEFT("textures/sprites/arrow_left.svg"),
+    ARROW_RIGHT("textures/sprites/arrow_right.svg"),
+    ROCKET("textures/sprites/rocket.svg"),
+    SELECTOR_STARTPOINT("textures/widgets/selector_startpoint.svg"),
+    DARK_SELECTOR_STARTPOINT("textures/widgets/selector_startpoint_darkened.svg"),
+    SELECTOR_ENDPOINT("textures/widgets/selector_endpoint.svg"),
+    DARK_SELECTOR_ENDPOINT("textures/widgets/selector_endpoint_darkened.svg"),
+    SELECTOR_MIDPOINT("textures/widgets/selector_midpoint.svg"),
+    DARK_SELECTOR_MIDPOINT("textures/widgets/selector_midpoint_darkened.svg"),
+    SELECTOR_STANDALONE("textures/widgets/selector_standalone.svg"),
+    DARK_SELECTOR_STANDALONE("textures/widgets/selector_standalone_darkened.svg");
 
     private String filename;
-
+    private int id;
 
     Textures(String filename){
         this.filename = filename;
+        this.id = Counter.getTextureId();
     }
 
 
@@ -118,6 +123,11 @@ public enum Textures {
 
     }
 
+    public int getId(){
+        return id;
+    }
+
+    @Experimental
     public static Texture combineTextures(Texture background, Texture foreground) {
 //        background.getTextureData().prepare();
         Pixmap pixmap1 = background.getTextureData().consumePixmap();

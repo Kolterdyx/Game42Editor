@@ -2,8 +2,8 @@ package me.kolterdyx.game42editor.components;
 
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Vector2;
-import me.kolterdyx.game42editor.components.controlpanelwidgets.Button;
-import me.kolterdyx.game42editor.components.controlpanelwidgets.Selector;
+import me.kolterdyx.game42editor.components.widgets.Button;
+import me.kolterdyx.game42editor.components.widgets.Selector;
 
 import java.util.ArrayList;
 
@@ -30,6 +30,9 @@ public abstract class ControlPanel {
         this.pos = pos;
         for (Button button : buttons){
             button.setPos(button.getPos().add(pos));
+        }
+        for (Selector selector : selectors) {
+            selector.setPos(selector.getPos().add(pos));
         }
     };
 

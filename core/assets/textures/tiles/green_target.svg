@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30mm"
+        height="30mm"
+        viewBox="0 0 30 30">
+  <rect
+     style="fill:#00be00;fill-opacity:1;"
+     width="30"
+     height="30"
+     x="0"
+     y="0"
+     ry="5" />
+  <rect
+     ry="7.5"
+     y="7.5"
+     x="7.5"
+     height="15"
+     width="15"
+     style="fill:#aac8c8;fill-opacity:1;" />
+</svg>
